@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="animated">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 002 - Cartão de produto</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="product-image">
+            <button id="btn-360" onclick="toggle()">
+                <img src="./assets/img/360.svg" alt="Botão para animar o sofa">
+            </button>
+            <button id="btn-close" onclick="toggle()">
+                <img src="./assets/img/close.svg" alt="Botão para parar de animar">
+            </button>
+
+            <img id="static" src="./assets/img/sofa.jpg" alt="Sofa">
+            <img id="animated" src="./assets/img/sofa-gif.gif" alt="Sofa em gif">
+        </div>
+
+        <div id="product-details">
+            <h4>CÓDIGO: 42404</h4>
+            <h1>Sofá Margot II - Rosé</h1>
+            <p>R$ 4.000</p>
+            <button>ADICIONAR À CESTA</button>
+        </div>
+    </div>
+
+    <script>
+        function toggle() {
+            // Se a classe exitir tira se nao existir coloca
+            document.documentElement.classList.toggle(
+                'animated'
+            )
+        }
+    </script>
+</body>
+
+</html>
